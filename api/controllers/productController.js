@@ -60,7 +60,7 @@ const updateProductById = async (req, res) => {
         const bproduct = await Product.findByIdAndUpdate(id, actual, {new: true})    
         return res.json({
             msg: "Porducto actualizado",
-            data: { product }
+            data: { bproduct }
         })
     } catch (error) {
         return res.status(500).json({
